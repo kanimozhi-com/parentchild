@@ -1,9 +1,1 @@
-name: Parent Workflow
-
-on:
-  workflow_dispatch:  # Allows manual trigger from GitHub UI
-
-jobs:
-  call-child:
-    uses: ./.github/workflows/child.yml  # Reuse the child workflow
 
