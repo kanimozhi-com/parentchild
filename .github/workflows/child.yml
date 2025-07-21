@@ -1,1 +1,13 @@
+name: Child Workflow
+
+on:
+  workflow_call:  # Allows the workflow to be called by another
+
+jobs:
+  child-job:
+    runs-on: self-hosted  # ✅ This line ensures the job runs on YOUR machine (self-hosted runner)
+
+    steps:
+      - name: Print from Child
+        run: echo "👶 Hello from the CHILD workflow on self-hosted runner!"
 
