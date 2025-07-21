@@ -1,1 +1,9 @@
+name: Parent Workflow
+
+on:
+  workflow_dispatch:  # Allows manual triggering from GitHub UI
+
+jobs:
+  call-child-workflow:
+    uses: ./.github/workflows/child.yml  # ✅ Calls the child workflow (child also runs self-hosted)
 
