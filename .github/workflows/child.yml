@@ -1,1 +1,12 @@
+name: Child Workflow
+
+on:
+  workflow_call:  # This makes it reusable
+
+jobs:
+  print-child:
+    runs-on: self-hosted  # IMPORTANT: Use self-hosted runner
+    steps:
+      - name: Print from child
+        run: echo "👶 Hello from the CHILD workflow running on self-hosted runner!"
 
